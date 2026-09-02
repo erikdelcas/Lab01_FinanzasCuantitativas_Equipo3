@@ -131,3 +131,25 @@ def optimize_quotes(pi_informed=PI_INFORMED):
             pi_informed,
         ),
     }
+
+def sensitivity_analysis(pi_values=(0.1, 0.4, 0.7)):
+    """
+    Repite la optimización para diferentes proporciones
+    de traders informados.
+    """
+    results = []
+
+    for pi_informed in pi_values:
+        optimal = optimize_quotes(pi_informed=pi_informed)
+
+        results.append(
+            {
+                "pi_informed": pi_informed,
+                "bid": optimal["bid"],
+                "ask": optimal["ask"],
+                "spread": optimal["spread"],
+                "expected_profit": optimal["expected_profit"],
+            }
+        )
+
+    return results
