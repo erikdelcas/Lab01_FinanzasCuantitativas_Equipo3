@@ -1,4 +1,4 @@
-# Laboratorio 01: Cotizaciones óptimas de un formador de mercado
+# Laboratorio 01: Cotizaciones óptimas de un market maker
 
 - Erik del Castillo
 
